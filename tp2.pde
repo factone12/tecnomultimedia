@@ -155,6 +155,9 @@ void draw () {
        pushStyle();
        fill (255,251,211);
        textSize( map(contador, 400, 0, 100, 20) );
+       if (contador<200){
+      contador=200;
+      }
       text ("RYAN REYNOLDS",width/2,height/2);
       popStyle();
       pushStyle();
@@ -170,6 +173,9 @@ void draw () {
       pushStyle();
       fill (255,251,211);
       textSize( map(contador2, 400, 100, 100, 20) );
+      if (contador2<200){
+      contador2=200;
+      }
       text ("MORENA BACCARIN",width/2+20,height/2);
       pushStyle();
        fill (255,77,77);
@@ -185,6 +191,9 @@ void draw () {
       pushStyle();
       fill (255,251,211);
       textSize( map(contador, 400, 0, 100, 20) );
+      if (contador<200){
+      contador=200;
+      }
       text ("ED SKREIN",width/2,height/2);
       popStyle();
      }
@@ -193,7 +202,7 @@ void draw () {
         contador3++;
       background (foto0);
       image(foto0, width, height, width, height);
-      //image(foto9, 700, 550, 40, 40);
+      image(foto9, 700, 550, 40, 40);
       pushStyle();
       textSize (20);
       fill(0,0,0);
@@ -213,14 +222,18 @@ void draw () {
       text ("STEFAN KAPICIC",width/2-150,450);
       popStyle();
      }
-
-     
+ else if (pantalla ==9) {
+background (foto10);
+image(foto10, width, height, width, height);
+text("THANKS FOR WATCHING",500,250);
+ 
+ }    
    println (mouseX,mouseY);
  }
 
 void mousePressed() {
   
-    if (pantalla>=9) {
+    if (pantalla>=10) {
         pantalla = 0;
     }
   
@@ -246,12 +259,15 @@ void mousePressed() {
  }
   else if (pantalla == 8) {
        if ( dist(mouseX, mouseY, 700, 550) < 40 ) {
-      pantalla=0;
+      pantalla=9;
       contador=0; }  
  }
+  else if (pantalla == 9) {
+       if ( dist(mouseX, mouseY, 700, 550) < 40 ) {
+      pantalla=0; }  
+       
+ }
 
- 
- 
     else if ( pantalla == 0  ) {
       if ( dist(mouseX, mouseY, 380, 420) < 40 )
       pantalla=1;
@@ -284,6 +300,6 @@ void mousePressed() {
     incremento= 2;
     incremento2= 2;
     pantalla = 5;  }
-    
-
+    else if ( pantalla == 10  ) {
+pantalla = 0;}
 }
