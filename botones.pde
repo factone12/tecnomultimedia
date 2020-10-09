@@ -24,11 +24,11 @@ void clickPantalla1 () {
 void clickPantalla2 () {
   println( "Se hizo click en pantalla 2");
   // Q1-A click
-   if ( dist(mouseX, mouseY, posX8,width/2-120) < 100 ) {
+   if ( dist(mouseX, mouseY, botonX[0],width/2-120) < 100 ) {
    estado =3;
     } 
  // Q1-B click
-   if ( dist(mouseX, mouseY, posX9,width/2-120) < 100 ) {
+   if ( dist(mouseX, mouseY, botonX[1],width/2-120) < 100 ) {
    estado =8;
     } 
 }
@@ -36,11 +36,11 @@ void clickPantalla2 () {
 void clickPantalla3 () {
   println( "Se hizo click en pantalla 3");
  // Q2-A click
-   if ( dist(mouseX, mouseY, posX8,width/2-120) < 100 ) {
+   if ( dist(mouseX, mouseY, botonX[0],width/2-120) < 100 ) {
    estado =4;
     } 
  // Q2-B click
-   if ( dist(mouseX, mouseY, posX9,width/2-120) < 100 ) {
+   if ( dist(mouseX, mouseY, botonX[1],width/2-120) < 100 ) {
    estado =5;
     } 
 }
@@ -48,10 +48,10 @@ void clickPantalla3 () {
 void clickPantalla4 () {
 println( "Se hizo click en pantalla 4");
 // Q3-A click
-   if ( dist(mouseX, mouseY, posX8,width/2-120) < 100 ) {
+   if ( dist(mouseX, mouseY, botonX[0],width/2-120) < 100 ) {
    estado =6;
     } 
-   if ( dist(mouseX, mouseY, posX9,width/2-120) < 100 ) {
+   if ( dist(mouseX, mouseY, botonX[1],width/2-120) < 100 ) {
    estado =5;
     }
 }
@@ -60,27 +60,27 @@ void clickPantalla5 () {
 println( "Se hizo click en pantalla 5");
 
 // Q4-A click
-   if ( dist(mouseX, mouseY, posX8,width/2-120) < 100 ) {
+   if ( dist(mouseX, mouseY, botonX[0],width/2-120) < 100 ) {
    estado =7;
     } 
- if ( dist(mouseX, mouseY, posX9,width/2-120) < 100 ) {
+ if ( dist(mouseX, mouseY, botonX[1],width/2-120) < 100 ) {
    estado =6;
     } 
  }
  //pantalla6 -final A//
  void clickPantalla6 () {
 println( "Se hizo click en pantalla 6");
-   if ( dist(mouseX, mouseY, posX8,width/2-120) < 100 ) {
+   if ( dist(mouseX, mouseY, botonX[0],width/2-120) < 100 ) {
    estado =15;
     } 
 }
  //pantalla7//
 void clickPantalla7 () {
 println( "Se hizo click en pantalla 7 final");
-   if ( dist(mouseX, mouseY, posX8,width/2-120) < 100 ) {
+   if ( dist(mouseX, mouseY, botonX[0],width/2-120) < 100 ) {
    estado =9;
     }
-   if ( dist(mouseX, mouseY, posX9,width/2-120) < 100 ) {
+   if ( dist(mouseX, mouseY, botonX[1],width/2-120) < 100 ) {
    estado =9;
     } 
 }
@@ -88,17 +88,17 @@ println( "Se hizo click en pantalla 7 final");
  void clickPantalla8 () {
 println( "Se hizo click en pantalla 8");
 // Q2-A click
-   if ( dist(mouseX, mouseY, posX8,width/2-120) < 100 ) {
+   if ( dist(mouseX, mouseY, botonX[0],width/2-120) < 100 ) {
    estado =4;
     } 
  // Q2-B click
-   if ( dist(mouseX, mouseY, posX9,width/2-120) < 100 ) {
+   if ( dist(mouseX, mouseY, botonX[1],width/2-120) < 100 ) {
    estado =6;
     } 
 }
 //pantalla9//
 void clickPantalla9 () {
-     if ( dist(mouseX, mouseY, posX8,width/2-120) < 100 ) {
+     if ( dist(mouseX, mouseY, botonX[0],width/2-120) < 100 ) {
    estado =15;
     } 
   

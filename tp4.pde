@@ -1,7 +1,7 @@
  /*
 Alumno: Contreras Franco
 Trabajo: Un dia como Presidente.
-Tecno1
+Tecno1 - COM.3 - David Bedoian
 */
 
 PFont font1; //variable font descargada DATAFONT
@@ -10,13 +10,9 @@ int a,c,d,e;
 float contador,contador1;
 int estado;
 //posiciones p(inicio,0,15);
-float posX,posX2;
-float posY;
-float posY2=  -100;
-float posY3=   800;
-float posY4=   1200;
-float posX3=  -400;
-float posX4=  -700;
+float posX,posX2,posX3,posX4;
+float posY,posY2,posY3,posY4;
+
 //posiciones p(2,3,4,5,6,7,8,9)//
 float posY6= 700;
 float posX8= -600;
@@ -26,7 +22,11 @@ float incrementoX =1;
 float incrementoX2 =1;
 float incrementoY =1;
 float incrementoY2 =1;
-
+//Array de movimiento//
+float [] botonX = {-600,1250 };
+float [] botonY = {700,800,1200};
+float [] contadorX = {1,1};
+float [] contadorY = {1,1,1};
 /*Array Q*/
 int CantQ = 12;
 PImage[] dialogos = new PImage[CantQ];
@@ -61,11 +61,8 @@ void setup() {
    for (int i = 0; i < dialogos.length; i++){
    dialogos[i] = loadImage ("dialogo_" + i + ".png");
    }
-       
    posX=0;
    posX2=width-100;
-   //incrementoX=2;
-  // incrementoX2=2;
    //VARIABLES DE CONTADORES
    contador = 0;
    contador1= 0;
@@ -75,77 +72,67 @@ void draw() {
   if ( estado==0 ) {
     //pantalla de inicio:
     mostrarPantalla0();
-    contador1=0;
+    contador1=0;/*
+    posY2= -100;
+    posY3=  800;
+    posY4=  1200;
+    posX3= -400;
+    posX4=-700;*/
+    contadorY[0]=1;
+    contadorY[1]=1;
+    contadorY[2]=1;
+    botonY[0]=700;
+    botonY[1]=800;
+    botonY[2]=1200;
     a=0;
     c=0;
     d=0;
     e=0;
   }else if ( estado == 1 ) {
-    //pantalla de pantalla 1:
-    mostrarPantalla1();
-   incrementoX=2;
-   incrementoX2=2;
-   incrementoY =1;
-
-  }else if ( estado == 2 ){
-    //pantalla de pantalla 2:
+    mostrarPantalla1(); 
+    desplazamientos();
+  }else if ( estado == 2){
     mostrarPantalla2();
-   posX=0;
-   posX2=width-100;
+    desplazamientos();
   }
-  else if ( estado == 3 ){
-    //pantalla de pantalla 3:
+ else if ( estado == 3 ){
     mostrarPantalla3();
-   posX=0;
-   posX2=width-100;
+    desplazamientos();
   }
   else if ( estado == 4 ){
-    //pantalla de pantalla 3:
     mostrarPantalla4();
-   posX=0;
-   posX2=width-100;
+    desplazamientos();
   }
     else if ( estado == 5 ){
-    //pantalla de pantalla 3:
     mostrarPantalla5();
-   posX=0;
-   posX2=width-100;
+    desplazamientos();
   }
     else if ( estado == 6 ){
-    //pantalla de pantalla 3:
     mostrarPantalla6();
-   posX=0;
-   posX2=width-100;
+    desplazamientos();
   }
   else if ( estado == 7 ){
-    //pantalla de pantalla 3:
     mostrarPantalla7();
-   posX=0;
-   posX2=width-100;
+    desplazamientos();
   }
     else if ( estado == 8 ){
-    //pantalla de pantalla 3:
     mostrarPantalla8();
-   posX=0;
-   posX2=width-100;
+    desplazamientos();
   }
    else if ( estado == 9 ){
-    //pantalla de pantalla 3:
     mostrarPantalla9();
-   posX=0;
-   posX2=width-100;
+    desplazamientos();
   }
    else if ( estado == 15 ){
-    //pantalla de pantalla 3:
     mostrarPantalla15();
-   posX=0;
-   posX2=width-100;
+    botonY[0]=700;
+    botonY[1]=800;
+    botonY[2]=1200;
   }
 }
 
 void mousePressed() {
   if ( estado==0 ) {
-    //click cuando estoy en la pantalla de inicio:
     clickPantalla0();  
   }else if ( estado==1 ) {
     clickPantalla1();      
@@ -168,5 +155,4 @@ void mousePressed() {
   }else if ( estado==15 ) {
     clickPantalla15();
 } 
-
 }
