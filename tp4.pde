@@ -3,6 +3,7 @@ Alumno: Contreras Franco
 Trabajo: Un dia como Presidente.
 Tecno1 - COM.3 - David Bedoian
 */
+//TUVE MUCHOS PROBLEMAS CON ENCONTRAR LA FORMA DE GENERAR UN BUCLE PARA ANIMAR LOS BOTONES DE VERDAD LO SIENTO//
 
 PFont font1; //variable font descargada DATAFONT
 int r,g,b;
