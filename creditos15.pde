@@ -23,6 +23,8 @@ void mostrarPantalla15() {
   e++;
   }
   text("Comisión 3 - David Bedoian",150,e+60);
+  }
+  /*
 //Imagen GameOver
     image (mix[4],590,botonY[1],50,50);
     if ( estado == 15) { 
@@ -41,7 +43,7 @@ void mostrarPantalla15() {
      popStyle();    
 }
 
-  /*
+  
   //Imagen Alberto full
   image (mix[3],width/2+200,posY2,200,150);
   //CONDICION DE CAIDA DE ALBERTICO
