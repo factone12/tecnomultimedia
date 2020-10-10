@@ -42,7 +42,6 @@ background(116,193,255);
        incrementoX = 0; 
     }
     }  
-
    //TITULO IMAGEN
     image(mix[9], posX2-50,30, 200, 150);    
   //TITULO INVOCACION DE MOVIMIENTO  
@@ -51,7 +50,6 @@ background(116,193,255);
         {if ( posX2<width/2+50)
         incrementoX2 = 0; }
     }
-    
      //IMAGEN ALBERTO
     image(mix[0], width/2-50,posY, 50, 50);
     //INVOCACION DE MOVIMIENTO de ALBERTO 

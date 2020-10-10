@@ -3,6 +3,7 @@ Alumno: Contreras Franco
 Trabajo: Un dia como Presidente.
 Tecno1 - COM.3 - David Bedoian
 */
+
 //TUVE MUCHOS PROBLEMAS CON ENCONTRAR LA FORMA DE GENERAR UN BUCLE PARA ANIMAR LOS BOTONES DE VERDAD LO SIENTO//
 
 PFont font1; //variable font descargada DATAFONT
@@ -13,11 +14,10 @@ int estado;
 //posiciones p(inicio,0,15);
 float posX,posX2,posX3,posX4;
 float posY,posY2,posY3,posY4;
-
 //posiciones p(2,3,4,5,6,7,8,9)//
-float posY6= 700;
-float posX8= -600;
-float posX9= 1250;
+//float posY6= 700;
+//float posX8= -600;
+//float posX9= 1250;
 //incremento//
 float incrementoX =1;
 float incrementoX2 =1;
@@ -40,10 +40,18 @@ PImage [] rec = new PImage [CantR];
 /*Array miscelaneos*/
 int CantM =10;
 PImage [] mix = new PImage [CantM];
+/*Minim*/
+import ddf.minim.*;
+Minim minim;
+AudioPlayer music;
 
 void setup() {
   size( 800, 600);
   estado = 0;
+   //minim//
+   minim =new Minim(this);
+   music =minim.loadFile("music.mp3");
+   music.loop();
    //Font creada//
    font1 = createFont("font1.ttf",18);
    //Carga de miscelaneos//
@@ -138,9 +146,9 @@ void mousePressed() {
   }else if ( estado==1 ) {
     clickPantalla1();      
   }else if ( estado==2 ) {
-    clickPantalla2();    
+    clickPantalla2();
   }else if ( estado==3 ) {
-    clickPantalla3();    
+    clickPantalla3();
   }else if ( estado==4 ) {
     clickPantalla4();    
   }else if ( estado==5 ) {

@@ -1,3 +1,4 @@
+
 void desplazamientos(){
   //REC EJE Y//
 if ( estado == 2 || estado == 3 || estado==4 || estado ==5 || estado ==6 || estado ==7 || estado ==8 || estado ==9){ 
