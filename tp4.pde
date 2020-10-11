@@ -12,14 +12,14 @@ Tecno1 - COM.3 - David Bedoian
 //Array de movimiento// 
 /*float [] botonX = {-600,1250 };
 float [] botonY = {700,800,1200};
-float [] contadorX = {1,1};
-float [] contadorY = {1,1,1};*/
+float [] contadorX = {1,1};*/
+
 
 PFont font1; //variable font descargada DATAFONT
-int r,g,b;
-int a,c,d,e;
+int r,g,b;  //colores
+int a,c,d,e; //creditos aumento 
 float contador,contador1;
-int estado;
+int estado; 
 //posiciones p(inicio,0,15);
 float posX,posX2,posX3,posX4;
 float posY,posY2,posY3,posY4;
@@ -56,11 +56,10 @@ float possX17;
 float possY8;
 float incr20,incr21;
 //incremento// 
-float incrementoX =1;
-float incrementoX2 =1;
-float incrementoY =1;
-float incrementoY2 =1;
-
+float incrementoX =1,incrementoX2 =1,incrementoY =1,incrementoY2 =1;
+//Array creditos//
+float [] contadorY = {1,1,1,2,1};
+float [] ejeY = {800,1200,-100,-400,-700};
 /*Array Q*/
 int CantQ = 12;
 PImage[] dialogos = new PImage[CantQ];
@@ -103,7 +102,6 @@ void setup() {
    for (int i = 0; i < dialogos.length; i++){
    dialogos[i] = loadImage ("dialogo_" + i + ".png");
    }
-
    //VARIABLES
    posX=0;
    posX2=width-100;
@@ -116,12 +114,17 @@ void draw() {
   if ( estado==0 ) {
     //pantalla de inicio:
     mostrarPantalla0();
-    contador1=0;/*
-    posY2= -100;
-    posY3=  800;
-    posY4=  1200;
-    posX3= -400;
-    posX4=-700;*/
+    contador1=0;
+    contadorY[0]=1;
+    contadorY[1]=1;
+    contadorY[2]=1;
+    contadorY[3]=2;
+    contadorY[4]=1;
+    ejeY[0]= 800;
+    ejeY[1]= 1200;
+    ejeY[2]= -100;
+    ejeY[3]= -400;
+    ejeY[4]= -700;
     a=0;
     c=0;
     d=0;
@@ -201,6 +204,16 @@ void draw() {
     incr16=1;
     incr17=1;
     a=0; c=0; d=0;e=0;
+    contadorY[0]=1;
+    contadorY[1]=1;
+    contadorY[2]=1;
+    contadorY[3]=2;
+    contadorY[4]=1;
+    ejeY[0]= 800;
+    ejeY[1]= 1200;
+    ejeY[2]= -100;
+    ejeY[3]= -400;
+    ejeY[4]= -700;
   }
   else if ( estado == 7 ){
     mostrarPantalla7();   
@@ -226,6 +239,16 @@ void draw() {
    else if ( estado == 9 ){
     mostrarPantalla9();
     a=0; c=0; d=0;e=0;
+    contadorY[0]=1;
+    contadorY[1]=1;
+    contadorY[2]=1;
+    contadorY[3]=2;
+    contadorY[4]=1;
+    ejeY[0]= 800;
+    ejeY[1]= 1200;
+    ejeY[2]= -100;
+    ejeY[3]= -400;
+    ejeY[4]= -700;
   }
    else if ( estado == 15 ){
     mostrarPantalla15(); 
